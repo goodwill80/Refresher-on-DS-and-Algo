@@ -11,6 +11,7 @@
     - Web App architecture describe major components, their relationships and how they interact with each other. Server contains all business logic
     - Client Server architecture (Most common) - Client > server > database all living their own, or 2-tier (Client-server and DB) / (Client and Server-DB)
     - Client Server architecture is subject to risk of single point of failure.
-    - Peer-to-peer architecture (i.e. web3) overcomes single point of failures as it consists of a network of peers-nodes which are both clients and servers, without a centralised server.
-    - Monolithic structure - all codes into a single codebase
-    - Microservice structure - 
+    - Peer-to-peer architecture (i.e. web3, blockchain) overcomes single point of failures as it consists of a network of peers-nodes which are both clients and servers, without a centralised server.
+    - *** Monolithic structure - all codes into a single codebase tightly coupled. (Risk of single point of failure)
+    - *** Microservice structure - every distinct feature of an application may have one or more dedicated microservice powering it. (collection of services that each serve a unique responsibility and live separately from one another but connected to each other. Hence, each service can be scale independently) - each service can have its own language, DB and libraries
+    - *** Serverless structure / functions - is a design pattern where a microservice responsibility is hosted by a third-party (AWS Lambda, Azure, firebase cloud). Each serverless functions execute small blocks of codes.
