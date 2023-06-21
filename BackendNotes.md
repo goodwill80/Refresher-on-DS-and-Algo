@@ -15,6 +15,12 @@
     - *** Monolithic structure - all codes into a single codebase tightly coupled. (Risk of single point of failure)
     - *** Microservice structure - every distinct feature of an application may have one or more dedicated microservice powering it. (collection of services that each serve a unique responsibility and live separately from one another but connected to each other. Hence, each service can be scale independently) - each service can have its own language, DB and libraries
     - *** Serverless structure / functions - is a design pattern where a microservice responsibility is hosted by a third-party (AWS Lambda, Azure, firebase cloud). Each serverless functions execute small blocks of codes.
+    - Event-driven architecture is a way of building enterprise IT systems that lets information flow between applications, microservices, and connected devices in a real-time manner as events occur throughout the business.
+    - An event is simply an action
+    - An event notification is a message confirming an action has been taken. The notification may be a simple confirmation of the action or contain additional data about the event that downstream systems use to apply their business logic.
+    - Because it's the event notification or message that's being handled in the system, event-driven architecture is sometimes referred to as message-driven architecture.
+    - Event-driven architecture (EDA) is a system design practice built to record, transmit, and process events through a decoupled architecture. This means that systems don't need to know about each other to share information and accomplish tasks.
+    - Decoupling is a central component of EDA, and it offers a major advantage versus other methods for sharing data such as APIs. When sending an API call, the application needs to know the dependencies and parameters so it can send a properly formatted request. It then waits for the response before proceeding. This also means that there will always be a request and a response to transfer data.
 
 3. What is jUnit test?
 - A unit test is a type of software testing that focuses on verifying the correctness of individual units of code, typically at the function or method level. The goal of unit testing is to isolate and test each unit of code in isolation to ensure that it behaves as expected and produces the desired output.

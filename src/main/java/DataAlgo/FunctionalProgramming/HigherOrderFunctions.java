@@ -27,7 +27,9 @@ public class HigherOrderFunctions {
         });
     }
 
-    // Stream Operations - using filter, map, sorted (ascending)
+    // Stream pipeline Operations - using filter, map, sorted (ascending)
+    // Stream() is a method from List, which we can call directly
+    // For [] arrays, we can call Arrays.stream(array) to convert it to stream
     public static void filterPrices(List<Double> prices) {
         prices.stream()
                 .filter(price-> {
@@ -42,11 +44,20 @@ public class HigherOrderFunctions {
                 .map(price -> {
                     return "$" + price;
                 })
-                // forEach is a terminal operation
+                // Terminal operators to end stream:
+                // .forEach does not return anything
+                // .toList() convert stream back to array
+                // .reduce(0, (x, y) -> x + y)  0 is starting value, x is accumulator, y is the singular stream value
+                // .findFirst() need to include orElse() after this
+                // .orElse(null)
+                // .count()
                 .forEach(price -> {
                     System.out.println(price);
                 });
     }
+
+
+
 
 
 }

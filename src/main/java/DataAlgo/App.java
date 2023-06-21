@@ -87,6 +87,11 @@ public class App
         int[] myArray2 = BasicSorting.selectionSort(new int[] {4,2,6,5,1,3});
         // System.out.println(Arrays.toString(myArray2));
 
+        int[] myArray3 = BasicSorting.insertionSort(new int[]{4,2,6,5,1,3});
+        // System.out.println(Arrays.toString(myArray3));
+
+        // CodeChallenge.checksum("3456123");
+
         // Higher Order functions
         // HigherOrderFunctions.forEachLoop(Arrays.asList("Jon", "Oliver", "Ali"));
 
@@ -102,7 +107,7 @@ public class App
         // HigherOrderFunctions.forEachLoopMap(coffeeRatings);
 
         List<Double> prices = Arrays.asList(234.77, 222.99, 100.99, 44.99, 234.99);
-//        HigherOrderFunctions.filterPrices(prices);
+        // HigherOrderFunctions.filterPrices(prices);
 
 
 

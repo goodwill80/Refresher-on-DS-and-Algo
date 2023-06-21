@@ -326,7 +326,7 @@ public class CodeChallenge {
         return output;
     }
 
-    // Challenge 21 - Palindrome Number - Solve without converting to string
+    // Challenge 21 - Palindrome Number
     public static boolean isNumPalindrome(int x) {
         if(x < 0) return false;
         String str = Integer.toString(x);
@@ -336,23 +336,74 @@ public class CodeChallenge {
             }
         }
         return true;
-
-//      if(x < 0 || (x != 0 && x%10 == 0)) {
-//          return false;
-//      }
-//
-//      int num = x;
-//      int y = 0;
-//
-//      while (num != 0) {
-//
-//      }
-
     }
-    // Write a Java program that prints the numbers from 1 to 100.
-    //But for multiples of three print “Fizz” instead of the number, and for multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
-    public void fizzBuzz() {
 
+    // Challenge 22 - Write a Java program that prints a checksum letter based on the following:
+    // The input will be a string of 7 digits;
+    // Each character is multiplied by the weightage of its position in the string;
+    // The products are summed up;
+    // The total number is divided by 10;
+    // Subtract the remainder of the division from 10;
+    // The checksum letter is to be mapped from the table below;
+
+    // weightage array [2, 6, 5, 7, 4, 3, 2]
+    // checksum => 1 = W, 2 = X, 3 = Y, 4 = Z, 5 = A, 6 = B, 7 = C, 8 = D, 9 = E, 10 = F
+
+    public static void checksum(String digits) {
+        // Define start value of sum of products
+        int sum = 0;
+        // Weightage - assume that the digits always 7 in length
+        int[] weightage = {2, 6, 5, 7, 4, 3, 2 };
+        // Loop through the string and get memory of each num in string
+        for(int i = 0; i < digits.length(); i++) {
+            int number = Character.getNumericValue(digits.charAt(i));
+            //  multiplied each num by its weightage in the array above, then sum the products
+            sum = sum + (number * weightage[i]);
+        }
+        // Get the remainder of sum dvided by 10
+        int remainderOfTen = sum % 10;
+        // Subtract the remainder of the division from 10;
+        int checkValue = 10 - remainderOfTen;
+
+        // Since each num of the checkvalue is assigned with a letter
+        // use a switch to define to output which is a char
+        char myOutput = '0';
+        switch(checkValue) {
+            case 1:
+                myOutput = 'W';
+                break;
+            case 2:
+                myOutput = 'X';
+                break;
+            case 3:
+                myOutput = 'Y';
+                break;
+            case 4:
+                myOutput = 'Z';
+                break;
+            case 5:
+                myOutput = 'A';
+                break;
+            case 6:
+                myOutput = 'B';
+                break;
+            case 7:
+                myOutput = 'C';
+                break;
+            case 8:
+                myOutput = 'D';
+                break;
+            case 9:
+                myOutput = 'E';
+                break;
+            case 10:
+                myOutput = 'F';
+                break;
+            default:
+                myOutput = '*';
+        }
+
+        System.out.println("The ans is " + myOutput);
     }
 
 }
