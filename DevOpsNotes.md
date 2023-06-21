@@ -19,3 +19,9 @@ Explain Scrum in your own terms. What are the artifacts and rituals related to S
 What is XSS and how can it be prevented?
 
 - Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+
+
+What are the advantages of CI/CD?
+What is containerization?
+What is some steps involved in CI?
+What are secrets and what the risks involved with unprotected secrets?

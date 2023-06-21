@@ -4,7 +4,7 @@ Big-O-Notation
 - Space Complexity is measured with MEMORY SPACE
 
 Time Complexity
-- Big O is always to measure the worst case of an operation
+- Big O always measure the worst case of an operation
 - o(n)
   - for(int i=0; i < 10; i++) System.out.print(i)
   - The above is o(n)

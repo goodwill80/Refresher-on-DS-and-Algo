@@ -43,3 +43,82 @@
 - In short, it is a tool that provides the implementation of JPA. JPA is interface while Hibernate is implementation.
 - It is the most mature JPA implementation 
 - Spring boot by default choose hibernate
+
+7. What is a Bean in Spring? 
+- In the context of the Spring Framework, a bean refers to an object that is managed by the Spring IoC (Inversion of Control) container.
+- A bean represents an instance of a class that is created, configured, and managed by the Spring container.
+- Beans are defined and configured in the Spring configuration files or through annotations. @Bean
+- By leveraging the Spring container and its bean management capabilities, developers can benefit from the flexibility, modularity, and testability provided by dependency injection. Beans in Spring facilitate the construction of modular and maintainable applications by promoting loose coupling and separation of concerns.
+
+8. What is the Autowired annotation?
+- It is part of Dependency injection. 
+- It allows Spring to resolve and inject collaborating beans into our bean.
+- It is denoted by @Autowired
+- Example of injecting Service, repository component into the relevent beans
+- The @Autowired annotation can be used to autowire bean on the setter method just like @Required annotation, constructor, a property or methods with arbitrary names and/or multiple arguments.
+
+9. What is Dependency Injection?
+- Dependency injection is the process of supplying a resource that a given piece of code requires. The required resource, which is often a component of the application itself, is called a dependency.
+
+10. How is Maven used as a dependency manager for Java?
+- Maven helps manage and enable dependencies to be made avail to the entire application
+- It simplify and standardise the build process
+- It is equivalent to NPM manager in JS
+- Maven reach out to all dependencies listed in POM (Project Object Model) same as Package.json and inject them to the application
+
+11. What is the Maven lifecycle?
+- Maven is based around the central concept of a build lifecycle. What this means is that the process for building and distributing a particular artifact (project) is clearly defined. For the person building a project, this means that it is only necessary to learn a small set of commands to build any Maven project, and the POM will ensure they get the results they desired.
+- There are three built-in build lifecycles: default, clean and site. The default lifecycle handles your project deployment, the clean lifecycle handles project cleaning, while the site lifecycle handles the creation of your project's web site.
+
+12. What are some annotations used for requests and controllers?
+- @Controller: This annotation is used to mark a class as a Spring MVC controller. It is typically placed on the class level.
+- @RestController: This annotation combines the @Controller and @ResponseBody annotations. It is used for RESTful web services where the response is serialized directly to the HTTP response body.
+- @RequestMapping: This annotation is used to map a URL pattern or path to a controller method. It can be applied at the class level and/or method level to specify the request mapping.
+- @GetMapping, @PostMapping, @PutMapping, @PatchMapping, @DeleteMapping (Shortcut for @RequestMapping)
+- @PathVariable: This annotation is used to bind a method parameter to a path variable in the URL.
+- @RequestParam: This annotation is used to bind a method parameter to a query parameter or form parameter in the request.
+- @RequestBody: This annotation is used to bind the request body to a method parameter.
+- @RequestHeader: This annotation is used to bind a method parameter to a specific HTTP request header.
+- @Valid: This annotation is used to trigger validation on a method parameter or a method return value.
+  
+- Databases
+
+13. What is normalization?
+- refers to the process of organizing and structuring a database schema to eliminate data redundancy and improve data integrity. It involves applying a set of rules and guidelines to design a database schema that minimizes data duplication and ensures efficient storage, retrieval, and maintenance of data.
+- First Normal Form (1NF): Ensures that each column in a table contains only atomic values (indivisible values) and there are no repeating groups or arrays.
+- Second Normal Form (2NF): Builds upon 1NF and requires that every non-key column in a table is functionally dependent on the entire primary key, eliminating partial dependencies.
+- Third Normal Form (3NF): Builds upon 2NF and ensures that there are no transitive dependencies, meaning that non-key columns should not depend on other non-key columns.
+
+14. What are the 4 main operations that can be done with databases?
+- The four main operations that can be performed with databases are often referred to as CRUD operations, which stands for Create, Read, Update, and Delete. These operations encompass the basic functionalities required for managing data in a database system:
+
+15. Explain the different relationships in a relational database?
+- One-to-One (1:1) Relationship -  Each employee has only one corresponding address, and each address is associated with only one employee.
+- One-to-Many (1:N) Relationship - Each customer can have multiple orders, but each order is associated with only one customer.
+- Many-to-One (N:1) Relationship - Multiple orders can be placed for the same product, but each order is associated with only one product.
+- Many-to-Many (N:N) Relationship -  Each student can be enrolled in multiple courses, and each course can have multiple students enrolled.
+
+
+Backend Services
+
+16. What is REST and how is it implemented?
+- defines a uniform interface that consists of a set of standard methods (HTTP verbs) to perform operations on resources. The commonly used HTTP methods include GET, POST, PUT, PATCH, and DELETE. Each method has a specific purpose and follows a consistent semantics.
+- enable communication and data exchange between different systems.
+- Stateless: Each request from the client to the server contains all the necessary information to understand and process it.
+- REST is typically implemented using the HTTP protocol 
+- Map HTTP methods to operations: Map the HTTP methods (GET, POST, PUT, PATCH, DELETE) to the operations on the resources. For example, GET retrieves a resource, POST creates a new resource, PUT updates a resource, and so on.
+  What can requests contain?
+
+17. What is the difference between PUT and PATCH?
+- PUT is used to update or replace an entire resource with a new representation provided in the request payload. It requires the client to send a complete representation of the resource, including any unchanged fields.
+- PATCH is used to partially update a resource with the changes specified in the request payload. It allows clients to send only the modified fields or properties, rather than the entire representation of the resource.
+
+18. What is middleware used for?
+- API middleware is a software component or layer that sits between the client and server, intercepting and processing API requests and responses. It provides a way to add additional processing, transformation, and validation logic to the API flow.
+- Express for example is a middleware for nodeJS, which provides methods that help simplify the backend code
+- Authentication and Authorization: Middleware can handle authentication and authorization processes to ensure that only authorized users or applications can access the API. It can validate access tokens, authenticate user credentials, enforce role-based access controls, and perform other security-related tasks.
+
+
+
+
+
