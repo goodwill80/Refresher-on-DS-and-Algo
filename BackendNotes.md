@@ -81,7 +81,7 @@
 - @RequestHeader: This annotation is used to bind a method parameter to a specific HTTP request header.
 - @Valid: This annotation is used to trigger validation on a method parameter or a method return value.
   
-- Databases
+
 
 13. What is normalization?
 - refers to the process of organizing and structuring a database schema to eliminate data redundancy and improve data integrity. It involves applying a set of rules and guidelines to design a database schema that minimizes data duplication and ensures efficient storage, retrieval, and maintenance of data.
@@ -119,6 +119,33 @@ Backend Services
 - Authentication and Authorization: Middleware can handle authentication and authorization processes to ensure that only authorized users or applications can access the API. It can validate access tokens, authenticate user credentials, enforce role-based access controls, and perform other security-related tasks.
 
 
+19. What is multithreading and how is it achieved?
+- CPU is the processor which uses processing units, known as cores, to process instructions
+- Every core is a worker
+- Every java code we write is sent over to the processor in the form of a thread (pathway or conveyor belt)
+- Therefore, each of the cores execute the instructions provided by the threads
+- Hence, the higher the cores the CPU has, the more threads or instructions you can process at the same time
+- A Multi-threaded application runs on many threads, hence, different parts of the code are running on different threads
+- It is important to note that by default, an application is single threaded.
+- The thread the code runs on by default is call the MAIN THREAD
+- Every application has a main thread
+
+20. What are the limitation of single threaded application? 
+- A single threaded application runs everything on a main thread
+- A time intensive task will block other codes from running
+- This is very inefficient as time intensive task should runs on a separate thread
+
+21. What is concurrency?
+- It means running the code, by performing more than 1 task at a time i.e. branching out different threads
+- Multi-threading achieve concurrency
+- This is done by creating threads, and running non-time intensive code on the main thread, and the time intensive ones on other threads
+- Example Thread thread = new Thread(Runnable task)
 
 
+22. What is JMS or Java Message Service?
+- it is a Java API that enables applications to asynchronously send and receive messages. 
+- It is just like a middleware, which is placed in the middle of components or clients. 
+- It served as a middleman, where one component can publish a message to the broker
+- While another component consumes the message from the broker
+- Hence, the concept of a publisher and subscriber
 

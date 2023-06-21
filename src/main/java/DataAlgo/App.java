@@ -1,10 +1,10 @@
 package DataAlgo;
 
+import DataAlgo.FunctionalProgramming.HigherOrderFunctions;
 import DataAlgo.SortingAlgo.BasicSorting;
 import DataAlgo.Structures.LinkedList;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 public class App 
@@ -75,17 +75,36 @@ public class App
         // System.out.println(pascal);
 
         LinkedList myLinkedList = new LinkedList(1);
-//        myLinkedList.append(2);
-//        myLinkedList.append(3);
-//        myLinkedList.append(4);
-//        myLinkedList.reverse();
-//        myLinkedList.printList();
+        // myLinkedList.append(2);
+        // myLinkedList.append(3);
+        // myLinkedList.append(4);
+        // myLinkedList.reverse();
+        // myLinkedList.printList();
 
         int[] myArray = BasicSorting.bubbleSort(new int[]{4,2,6,5,1,3});
-//        System.out.println(Arrays.toString(myArray));
+        // System.out.println(Arrays.toString(myArray));
 
         int[] myArray2 = BasicSorting.selectionSort(new int[] {4,2,6,5,1,3});
-//        System.out.println(Arrays.toString(myArray2));
+        // System.out.println(Arrays.toString(myArray2));
+
+        // Higher Order functions
+        // HigherOrderFunctions.forEachLoop(Arrays.asList("Jon", "Oliver", "Ali"));
+
+        List<Integer> numbers = Arrays.asList(2,1,4,3,6,4,3);
+        HigherOrderFunctions.sortNumbers(numbers);
+        // System.out.println(numbers);
+
+        Map<String, Integer> coffeeRatings = new HashMap<>();
+        coffeeRatings.put("StarBucks", 20);
+        coffeeRatings.put("CoffeeBean", 30);
+        coffeeRatings.put("TimCoffee", 50);
+        coffeeRatings.put("CoffeeShop", 90);
+        // HigherOrderFunctions.forEachLoopMap(coffeeRatings);
+
+        List<Double> prices = Arrays.asList(234.77, 222.99, 100.99, 44.99, 234.99);
+//        HigherOrderFunctions.filterPrices(prices);
+
+
 
     }
 
