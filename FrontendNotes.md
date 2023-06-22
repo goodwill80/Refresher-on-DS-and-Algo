@@ -7,6 +7,9 @@ What is JSX and what are props?
 
 
 What are hooks? Give some commonly used hooks.
+- In React, hooks are functions that allow functional components to access and utilize React features, such as state management, lifecycle methods, and context, without the need for class components. Hooks were introduced in React version 16.8 and provide a more concise and flexible way to write reusable and stateful logic in functional components.
+- useEffect, useState, useContext, useReducer, useMemo
+
 Why are components used in React?
 What is the difference between DOM and Virtual DOM?
 What are states in the context of React?
