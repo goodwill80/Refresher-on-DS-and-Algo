@@ -150,7 +150,7 @@ Backend Services
 22. What is logging in Spring?
 - Logging in spring boot is basically an API that provides tracing out of information along with a recording of any critical failure that might occur in the application during its run. Spring boot uses a common logging framework to implement all internal logging and leaves the log implementation open.
 
-3What is JMS or Java Message Service?
+23. What is JMS or Java Message Service?
 - it is a Java API that enables applications to asynchronously send and receive messages. 
 - It is just like a middleware, which is placed in the middle of components or clients. 
 - It served as a middleman, where one component can publish a message to the broker
