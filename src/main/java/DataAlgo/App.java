@@ -110,7 +110,14 @@ public class App
         List<Double> prices = Arrays.asList(234.77, 222.99, 100.99, 44.99, 234.99);
         // HigherOrderFunctions.filterPrices(prices);
 
-        FrequencyCounter.countOfWordsInSentence("Hello how are you you Hello");
+        // FrequencyCounter.countOfWordsInSentence("Hello how are you you Hello");
+
+        Boolean compareArraysSq = FrequencyCounter.compareSqArrays(
+                new int[] {2,3,4,5,6},
+                new int[] {4,9,16,25,36}
+        );
+
+        System.out.println(compareArraysSq);
 
     }
 

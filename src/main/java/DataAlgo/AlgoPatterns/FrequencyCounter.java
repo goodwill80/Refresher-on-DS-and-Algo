@@ -1,9 +1,6 @@
 package DataAlgo.AlgoPatterns;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FrequencyCounter {
 
@@ -19,4 +16,32 @@ public class FrequencyCounter {
         }
         System.out.println(wordCount.toString());
     }
+
+    // Write a function which accept 2 arrays
+    // it should return true if the opposing array has its corresponding  value squared as compared
+    // to the other
+    public static boolean compareSqArrays(int[] arr1, int[]arr2) {
+        if(arr1.length != arr2.length) return false;
+        Map<Integer, Integer> map1 = new HashMap<>();
+        Map<Integer, Integer> map2 = new HashMap<>();
+        // Populate map1
+        for(int num: arr1) {
+            map1.put(num, map1.containsKey(num)?map1.get(num) + 1 : 1);
+        }
+        // Populate map2
+        for(int num : arr2) {
+            map2.put(num, map2.containsKey(num)?map2.get(num) + 1 : 1);
+        }
+        // Check for same key and same value for both hashmaps
+        for(int num: arr1) {
+            if(!map2.containsKey(num * num)){
+                return false;
+            }
+            if(!Objects.equals(map1.get(num), map2.get(num * num))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
