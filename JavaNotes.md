@@ -12,3 +12,8 @@ Java:
 2. What is the difference between an abstract class and interface?
 - An abstract class is a class that may contain abstract methods along with non-abstract methods, fields, and constructors. It can also have method implementations. On the other hand, an interface is a reference type that defines a contract or a set of methods that a class implementing the interface must adhere to. It only contains method signatures and constants (public static final fields).
 - Abstract classes are used for class hierarchies, providing common implementation, while interfaces are used to define contracts and allow multiple inheritance of behavior. The decision to use an abstract class or an interface depends on the specific requirements and design goals of the application.
+
+3. How Editions of JAVA are there? 
+- There are 3 editions - Java SE, J2EE, J2ME
+- J2EE is a platform independent edition used for developing web based applications online.
+- 

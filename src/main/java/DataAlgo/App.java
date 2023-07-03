@@ -1,5 +1,6 @@
 package DataAlgo;
 
+import DataAlgo.AlgoPatterns.FrequencyCounter;
 import DataAlgo.FunctionalProgramming.HigherOrderFunctions;
 import DataAlgo.SortingAlgo.BasicSorting;
 import DataAlgo.Structures.LinkedList;
@@ -109,7 +110,7 @@ public class App
         List<Double> prices = Arrays.asList(234.77, 222.99, 100.99, 44.99, 234.99);
         // HigherOrderFunctions.filterPrices(prices);
 
-
+        FrequencyCounter.countOfWordsInSentence("Hello how are you you Hello");
 
     }
 
